@@ -1,0 +1,29 @@
+package com.example.myinstagram2
+
+import android.app.Activity
+import android.os.Bundle
+import android.widget.TextView
+import android.view.Gravity
+import android.graphics.Color
+import android.widget.LinearLayout
+
+class MainActivity : Activity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // إنشاء واجهة بسيطة جداً
+        val layout = LinearLayout(this)
+        layout.orientation = LinearLayout.VERTICAL
+        layout.gravity = Gravity.CENTER
+        layout.setBackgroundColor(Color.WHITE)
+
+        val text = TextView(this)
+        text.text = "مبروك يا ذوالفقار!\nالتطبيق اشتغل بنجاح"
+        text.textSize = 24f
+        text.setTextColor(Color.parseColor("#E1306C")) // لون إنستغرام
+        text.gravity = Gravity.CENTER
+        
+        layout.addView(text)
+        setContentView(layout)
+    }
+}
